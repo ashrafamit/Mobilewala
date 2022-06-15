@@ -1,10 +1,10 @@
 $(document).ready(function () {
+  
   // banner owl carousel
   $("#banner-area .owl-carousel").owlCarousel({
     dots: true,
     items: 1
   });
-
 
   // top sale owl carousel
   $("#top-sale .owl-carousel").owlCarousel({
@@ -24,8 +24,6 @@ $(document).ready(function () {
     }
   });
 
-
-
   // isotope filter
   var $grid = $(".grid").isotope({
     itemSelector: '.grid-item',
@@ -37,5 +35,39 @@ $(document).ready(function () {
     var filterValue = $(this).attr('data-filter');
     $grid.isotope({ filter: filterValue });
   })
+
+  // new phones owl carousel
+    $("#new-phones .owl-carousel").owlCarousel({
+      loop: true,
+      nav: false,
+      dots: true,
+      responsive : {
+          0: {
+              items: 1
+          },
+          600: {
+              items: 3
+          },
+          1000 : {
+              items: 5
+          }
+      }
+  })
+
+  // blogs owl carousel
+  $("#blogs .owl-carousel").owlCarousel({
+    loop: true,
+    nav: false,
+    dots: true,
+    responsive : {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 3
+        }
+    }
+  })
+
 
 });
